@@ -13,7 +13,7 @@ function setup() {
 
 function draw() {
   fill(0, 0, 0, 50); //grey/translucent
-  stroke(0, 0, 0, 50); //same
+  stroke(r, 0, 0, 50); //same
   
 
   line(mouseX, mouseY, random(50), random(50)); // draw a line - x,y,w,h
@@ -21,7 +21,7 @@ function draw() {
   ellipse(mouseX,mouseY,random(50), random(50)); //ellipse
   
  
-
+  r = (r+1) % 255; // this will make it go from 0 to 255 (+1) then snap back to 0 (%255)
 }
 
 function keyPressed()
